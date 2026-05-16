@@ -1,4 +1,4 @@
-// File Conects
+// File Connects
 
 async function loadComponent(id, file) {
 
@@ -9,13 +9,22 @@ async function loadComponent(id, file) {
     document.getElementById(id).innerHTML = data;
 }
 
-loadComponent("navbar", "../../components/navbar-and-file/navbar.html");
+loadComponent(
+  "navbar",
+  "/Sevoria-Restaurant-Project/components/navbar-and-file/navbar.html"
+);
 
-loadComponent("reservation", "../../components/reservation-form/reservation.html");
+loadComponent(
+  "reservation",
+  "/Sevoria-Restaurant-Project/components/reservation-form/reservation.html"
+);
 
-loadComponent("footer", "../../components/footer-and-links/footer.html");
+loadComponent(
+  "footer",
+  "/Sevoria-Restaurant-Project/components/footer-and-links/footer.html"
+);
 
-// File Conects
+// File Connects
 
 
 
