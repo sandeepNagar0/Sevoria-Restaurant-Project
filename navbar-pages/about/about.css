@@ -1,0 +1,472 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+:root {
+  --primary: #141414;
+  --secondary: #e6c2a1;
+  --text-Light: #d6d1ce;
+  --text-Dark: #9b9b9b;
+  --font-family: Fraunces, "Fraunces Placeholder", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary);
+  color: white;
+}
+
+.max-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+  display: block;
+  filter: blur(1px);
+  transform: scale(1.1);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 1) 0%,
+    rgba(20, 20, 20, 0.8) 40%,
+    rgba(20, 20, 20, 0.3) 100%
+  );
+
+  z-index: 1;
+}
+
+.hero-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-text > h1 {
+  display: inline-block;
+  font-size: 60px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--secondary);
+  position: relative;
+}
+.hero-text > h1::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  background-color: var(--secondary);
+}
+
+.hero-text > h1::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  background-color: var(--secondary);
+}
+
+.hero-text > p {
+  color: var(--text-Dark);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Hero */
+
+/* About Us Articles */
+
+.about-article{
+  width: 100%;
+  height: auto;
+  
+}
+.article-container{
+  width: 100%;
+  height: auto;
+}
+.article-box{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 45% auto;
+  gap: 8%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 70px;
+}
+
+.article-image-box{
+  width:100%;
+  border: 1px solid rgba(102, 99, 99, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.article-image-box>img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.article{
+  width: 100%;
+}
+
+.article>h5{
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.article>h1{
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  color: var(--text-Light);
+  margin: 10px 0px;
+}
+
+.article>p{
+  color: var(--text-Dark);
+  font-size: 16px;
+  font-weight:600;
+  margin-top: 20px;
+  line-height: 25px;
+}
+/* About Us Articles */
+
+
+
+/* our restaurant highlights */
+.our-restaurant{
+  width: 100%;
+  margin-top:100px ;
+}
+
+.restaurant-container{
+  width: 100%;
+  border: 1px solid rgba(168, 168, 168, 0.4);
+  padding: 20px;
+  border-radius: 7px;
+}
+.restaurant{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.restaurant-image{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+  
+  border: 1px solid rgba(168, 168, 168, 0.4);
+}
+
+.restaurant-image>img{
+  width: 100%;
+  height:470px ;
+  object-fit: cover;
+  display: block;
+
+}
+
+.restaurant-heading{
+  margin: 50px 0px 20px 0px;
+  text-align: center;
+}
+
+
+.restaurant-heading > h1 {
+  display: inline-block;
+  font-size: 40px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--secondary);
+  position: relative;
+}
+.restaurant-heading > h1::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  background-color: var(--secondary);
+}
+
+.restaurant-heading > h1::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  background-color: var(--secondary);
+}
+
+.restaurant-text-content{
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+
+}
+
+.restaurant-text-box{
+  display: inline-block;
+  border:1px solid rgba(102, 99, 99, 0.25);
+  padding: 15px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.restaurant-text-box>h3{
+  color:var(--text-Light) ;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.restaurant-text-box>p{
+  color: var(--text-Dark);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/*our restaurant highlights*/
+
+
+
+
+/* The Architects of Taste*/
+.architects-taste{
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.architects-taste-heading{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px;
+
+}
+
+.architects-taste-heading>h1{
+  font-family: var(--font-family);
+  color: var(--text-Light);
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 60px;
+}
+.architects-taste-heading>h1::before{
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--secondary);
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+
+.architects-taste-heading>p{
+  color: var(--text-Dark);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.architects-taste-items{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 25px;
+  padding: 40px;
+  border: 1px solid rgba(172, 170, 170, 0.2);
+}
+
+.architects-taste-box{
+  width: 100%;
+  max-width: 800px;
+}
+
+.architects-taste-box>h3{
+  margin-top: 15px;
+  font-size: 24px;
+  color: var(--text-Light);
+  font-weight: 500;
+  
+}
+
+.architects-taste-box>h6{
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--text-Light);
+  font-weight: 500;
+  
+}
+
+.architects-taste-image{
+  width: 100%;
+  height: 470px;
+  border-radius: 5px;
+  border: 1px solid rgba(136, 135, 135, 0.4);
+
+}
+
+.architects-taste-image>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 5px;
+  
+}
+/*The Architects of Taste*/
+
+/* Mobile Responsive */
+
+@media screen and (max-width:600px) {
+
+  /* Hero */
+
+  .hero-text{
+    margin-top: 50px;
+  }
+  .hero-text>h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+
+  }
+
+  .hero-text>p{
+    font-size: 18px ;
+    font-weight: 500;
+    line-height: 25px;
+    padding: 0px 20px;
+  }
+
+  /* Hero */
+
+  /* About Article */
+
+  .article-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* About Article */
+
+  /* Our Restaurent */
+
+  .restaurant-container{
+    padding: 0;
+    border: none;
+  }
+
+  .restaurant-image{
+    height: 400px;
+  }
+
+  .restaurant-heading>h1{
+    font-size: 24px;
+    text-decoration:underline ;
+  }
+
+  .restaurant-heading>h1::after{
+    width: 0px;
+    height: 0px;
+
+  }
+
+  .restaurant-heading>h1::before{
+    width: 0px;
+    height: 0px;
+
+  }
+
+  .restaurant-text-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Our Restaurent */
+
+  /* The Architects of Taste */
+
+  .architects-taste-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .architects-taste-heading>h1{
+    font-size: 24px;
+  }
+
+  .architects-taste-items{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 30px;
+  }
+
+  .architects-taste-image{
+    height:400px;
+  }
+  /* The Architects of Taste */
+  
+}
+
+/* Mobile Responsive */

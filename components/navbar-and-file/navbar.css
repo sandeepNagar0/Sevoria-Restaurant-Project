@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.max-width{
+  width: 90%;
+  margin: 0 auto;
+}
+.header{
+  width: 100%;
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(151, 151, 151, 0.4);
+   position: fixed; /* 👈 important */
+  top: 0;
+  z-index: 1000; 
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  
+}
+
+.navbar h2 {
+  font-size: 40px;
+  color: var(--secondary);
+  font-family: var(--font-family);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar > nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+nav>ul>li>a{
+  font-size: 20px;
+  color: var(--text-Light);
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+
+.navbtn{
+  width: fit-content;
+  padding: 7px 12px;
+
+  background: linear-gradient(
+    135deg,
+    #e6c2a1,
+    #c99a72
+  );
+  color: #141414;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  transition: all 0.3s ease;
+
+}
+
+.navbtn::after{
+  content: '➜';
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  transform: rotate(-45deg);
+
+  transition: all 0.3s ease;
+}
+
+.navbtn:hover{
+  transform: translate(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.navbtn:hover::after{
+  transform: rotate(0deg);
+}
+
+.navbar-icon{
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--text-Light);
+}
+
+@media (max-width:600px) {
+
+ @media (max-width:600px){
+
+  .header{
+    width: 100%;
+  }
+
+  .navbar{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .navbar > h2{
+    font-size: 30px;
+  }
+
+  .navbtn{
+    display: none;
+  }
+
+  .navbar-icon{
+    display: block;
+  }
+
+  nav > ul{
+    position: absolute;
+    top: 110%;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  nav > ul.active{
+    display: flex;
+  }
+}
+
+  
+}

@@ -1,0 +1,197 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+:root {
+  --primary: #141414;
+  --secondary: #e6c2a1;
+  --text-Light: #d6d1ce;
+  --text-Dark: #9b9b9b;
+  --font-family: Fraunces, "Fraunces Placeholder", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary);
+  color: white;
+}
+
+.max-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+  filter: blur(1px);
+  transform: scale(1.1);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 20, 1) 0%,
+    rgba(20, 20, 20, 0.8) 40%,
+    rgba(20, 20, 20, 0.3) 100%
+  );
+
+  z-index: 1;
+}
+
+.hero-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-text > h1 {
+  display: inline-block;
+  font-size: 50px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--secondary);
+  position: relative;
+}
+.hero-text > h1::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  background-color: var(--secondary);
+}
+
+.hero-text > h1::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  background-color: var(--secondary);
+}
+
+.hero-text > p {
+  color: var(--text-Dark);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Hero */
+
+/* Terms And Conditions */
+
+.terms-conditions{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+
+}
+
+article{
+    width: 60%;
+    margin: 0 auto;
+}
+article>h4{
+    color: var(--text-Dark);
+}
+
+article>h1{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: justify;
+    margin:20px 0px ;
+    color: var(--text-Light);
+    letter-spacing: 1px;
+}
+article>p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: var(--text-Dark);
+    text-align: start;
+    margin: 20px 0px;
+    list-style: disc;
+    position: relative;
+}
+article> p::before{
+  content: "• ";
+  position: absolute;
+  left: -20px;
+  top: 0%;
+  font-size: 20px;
+}
+/* Terms And Conditions */
+
+
+/* Mobile Responsive */
+
+@media screen and (max-width:600px) {
+
+  .hero-text{
+    width: 90%;
+  }
+
+  .hero-text > h1{
+    font-size: 28px;
+  }
+
+  .hero-text > h1::before,
+  .hero-text > h1::after{
+    display: none;
+  }
+
+  article{
+    width: 100%;
+    max-width: 100%;
+    margin: 0px 10px ;
+    padding-inline: 10px;
+  }
+
+   article > h1{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  article > p{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-left: 10px;
+  }
+ 
+}
+
+/* Mobile Responsive */

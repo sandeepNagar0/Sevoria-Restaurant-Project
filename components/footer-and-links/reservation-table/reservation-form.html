@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./Images/Savoria-icon.png" />
+    <title>Sevoria Restaurant</title>
+    <link rel="stylesheet" href="reservation-form.css" />
+    <link rel="stylesheet" href="components/navbar.css" />
+    <link rel="stylesheet" href="components/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="navbar"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <img
+        src="https://framerusercontent.com/images/ZXQ5h7usoi1tgjxL5ad1Sim6lH8.png" alt="Image"/>
+
+      <div class="overlay"></div>
+
+      <div class="hero-text">
+        <h1>Reserve Your Experience</h1>
+        <p>
+         Every course ascends toward heaven, &  time slows to rhythm of fine wine, & unforgettable flavor.
+        </p>
+      </div>
+    </section>
+
+    <!-- Reservation Form -->
+
+     <section class="reserve-table">
+        <div class="max-width">
+
+            <div class="reserve-table-box">
+                <img src="https://framerusercontent.com/images/uJ8s5QaULeThA2JRoHUeOECmuM.png?scale-down-to=1024" alt="">
+
+
+                <form action="" id="form">
+
+              <div class="reserve-table-details">
+                <h1>Dine With Us</h1>
+
+                <div class="table">
+                    <label for="">Name</label>
+                      <input type="text" id="name" placeholder="Enter Your Name">
+                </div>
+
+                <div class="table-shedule">
+                    <div class="table">
+                      <label for="">Email</label>
+                      <input type="email" id="email"  placeholder="Enter Your Email">
+                        
+
+                    </div>
+                    <div class="table">
+                         <label for="">Contact Number</label>
+                      <input type="tel" id="phone" placeholder="Enter Your Number">
+                    </div>
+
+                </div>
+
+                <div class="table">
+                    <label for="">Number of Seats</label>
+                      <input type="number" id="seats" placeholder="0">
+                </div>
+
+                 <div class="table-shedule">
+                    <div class="table">
+                      <label for="">Date</label>
+                      <input type="date" id="date" placeholder="Enter Your Email">
+                        
+
+                    </div>
+                    <div class="table">
+                         <label for="">Time</label>
+                      <input type="time" id="time" placeholder="Enter Your Number">
+                    </div>
+
+                </div>
+
+                <button>Confirm My Reservation</button>
+              </div>
+              </form>
+                
+            </div>
+            
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+</body>
+<script src="index.js"></script>
+<script src="reservation-form.js"></script>
+</html>
