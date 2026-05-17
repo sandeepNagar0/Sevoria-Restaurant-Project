@@ -125,7 +125,7 @@
   margin-top: 10px;
 }
 
-.reserve-table-details>button{
+.reservationbtn{
   width: fit-content;
    padding: 10px 16px;
 
@@ -151,7 +151,7 @@
 
 }
 
-.reserve-table-details > button::after{
+.reservationbtn::after{
   content: '➜';
 
   width: 32px;
@@ -174,16 +174,16 @@
   transition: all 0.3s ease;
 }
 
-.reserve-table-details > button:hover{
+.reservationbtn:hover{
   transform: translate(-4px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
-.reserve-table-details > button:hover::after{
+.reservationbtn:hover::after{
   transform: rotate(0deg);
 }
 
-.reserve-table-details>button>a{
+.reserve-table-details>a{
   text-decoration: none;
   color: black;
 }
@@ -262,7 +262,7 @@
 
   
 
-  .reserve-table-details>button{
+  .reservationbtn{
     margin: 20px 0px;
   }
 }
