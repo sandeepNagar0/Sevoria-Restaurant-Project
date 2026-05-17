@@ -92,7 +92,7 @@ footer{
 
 }
 
-.social-media-icons>i{
+.social-media-icons>a>i{
   font-size: 24px;
   color: var(--secondary);
   cursor: pointer;
