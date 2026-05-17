@@ -6,7 +6,11 @@ async function loadComponent(id, file) {
 
     const data = await response.text();
 
-    document.getElementById(id).innerHTML = data;
+    const element = document.getElementById(id);
+
+    if(element){
+        element.innerHTML = data;
+    }
 }
 
 loadComponent(
@@ -32,6 +36,8 @@ loadComponent(
 const scrollSection = document.querySelector(".ambiance-scroll");
 const imageContainer = document.querySelector(".ambiance-image-container");
 
+if(scrollSection && imageContainer){
+
 window.addEventListener("scroll", ()=>{
 
   const sectionTop = scrollSection.offsetTop;
@@ -44,3 +50,5 @@ window.addEventListener("scroll", ()=>{
   `translateX(${-move}px)`;
 
 });
+
+}
