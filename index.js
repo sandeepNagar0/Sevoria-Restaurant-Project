@@ -46,25 +46,6 @@ function initNavbar(){
 
     });
 
-  }
-
-}
-
-// Mobile Navbar
-
-function initNavbar(){
-
-  const menuBtn = document.querySelector(".navbar-icon");
-  const navMenu = document.querySelector(".nav-menu");
-
-  if(menuBtn && navMenu){
-
-    menuBtn.addEventListener("click", ()=>{
-
-      navMenu.classList.toggle("active");
-
-    });
-
     window.addEventListener("scroll", ()=>{
 
       navMenu.classList.remove("active");
@@ -76,6 +57,24 @@ function initNavbar(){
 }
 // Mobile Navbar
 
+// Ambiance Scroll
+
+const scrollSection = document.querySelector(".ambiance-scroll");
+const imageContainer = document.querySelector(".ambiance-image-container");
+
+window.addEventListener("scroll", ()=>{
+
+  const sectionTop = scrollSection.offsetTop;
+
+  const scrollY = window.scrollY;
+
+  const move = scrollY - sectionTop;
+
+  imageContainer.style.transform = `translateX(${-move}px)`;
+
+});
+
+// Ambiance Scroll
 
 // Image Rotate 
 
