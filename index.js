@@ -10,6 +10,7 @@ async function loadComponent(id, file) {
 
     if(element){
         element.innerHTML = data;
+        initNavbar();
     }
 }
 
@@ -30,25 +31,59 @@ loadComponent(
 
 // File Connects
 
+// Mobile Navbar
 
+function initNavbar(){
 
+  const menuBtn = document.querySelector(".navbar-icon");
+  const navMenu = document.querySelector(".nav-menu");
 
-const scrollSection = document.querySelector(".ambiance-scroll");
-const imageContainer = document.querySelector(".ambiance-image-container");
+  if(menuBtn && navMenu){
 
-if(scrollSection && imageContainer){
+    menuBtn.addEventListener("click", ()=>{
 
-window.addEventListener("scroll", ()=>{
+      navMenu.classList.toggle("active");
 
-  const sectionTop = scrollSection.offsetTop;
+    });
 
-  const scrollY = window.scrollY;
-
-  const move = scrollY - sectionTop;
-
-   imageContainer.style.transform =
-  `translateX(${-move}px)`;
-
-});
+  }
 
 }
+
+// Mobile Navbar
+
+function initNavbar(){
+
+  const menuBtn = document.querySelector(".navbar-icon");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if(menuBtn && navMenu){
+
+    menuBtn.addEventListener("click", ()=>{
+
+      navMenu.classList.toggle("active");
+
+    });
+
+    window.addEventListener("scroll", ()=>{
+
+      navMenu.classList.remove("active");
+
+    });
+
+  }
+
+}
+// Mobile Navbar
+
+
+// Image Rotate 
+
+gsap.to(".rotate-img",{
+  rotation: 360,
+  duration: 10,
+  repeat: -1,
+  ease: "none"
+});
+
+// Image Rotate
