@@ -173,6 +173,14 @@ body {
   padding: 10px 0px;
 }
 
+.category-item:hover h3{
+  color: var(--secondary);
+}
+
+.category-item:hover .arrow-icon{
+   transform: rotate(0deg);
+}
+
 .category-item:not(:nth-child(4)){
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
