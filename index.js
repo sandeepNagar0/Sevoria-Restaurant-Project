@@ -38,21 +38,23 @@ function initNavbar(){
   const menuBtn = document.querySelector(".navbar-icon");
   const navMenu = document.querySelector(".nav-menu");
 
-  if(menuBtn && navMenu){
+  if(!menuBtn || !navMenu) return;
 
-    menuBtn.addEventListener("click", ()=>{
+  // old listeners remove
+  const newMenuBtn = menuBtn.cloneNode(true);
+  menuBtn.parentNode.replaceChild(newMenuBtn, menuBtn);
 
-      navMenu.classList.toggle("active");
+  newMenuBtn.addEventListener("click", ()=>{
 
-    });
+    navMenu.classList.toggle("active");
 
-    window.addEventListener("scroll", ()=>{
+  });
 
-      navMenu.classList.remove("active");
+  window.addEventListener("scroll", ()=>{
 
-    });
+    navMenu.classList.remove("active");
 
-  }
+  });
 
 }
 // Mobile Navbar
