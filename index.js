@@ -62,27 +62,35 @@ function initNavbar(){
 const scrollSection = document.querySelector(".ambiance-scroll");
 const imageContainer = document.querySelector(".ambiance-image-container");
 
-window.addEventListener("scroll", ()=>{
+if(scrollSection && imageContainer){
 
-  const sectionTop = scrollSection.offsetTop;
+  window.addEventListener("scroll", ()=>{
 
-  const scrollY = window.scrollY;
+    const sectionTop = scrollSection.offsetTop;
 
-  const move = scrollY - sectionTop;
+    const scrollY = window.scrollY;
 
-  imageContainer.style.transform = `translateX(${-move}px)`;
+    const move = scrollY - sectionTop;
 
-});
+    imageContainer.style.transform = `translateX(${-move}px)`;
+
+  });
+
+}
 
 // Ambiance Scroll
 
 // Image Rotate 
 
-gsap.to(".rotate-img",{
-  rotation: 360,
-  duration: 10,
-  repeat: -1,
-  ease: "none"
-});
+if(typeof gsap !== "undefined"){
+
+  gsap.to(".rotate-img",{
+    rotation: 360,
+    duration: 10,
+    repeat: -1,
+    ease: "none"
+  });
+
+}
 
 // Image Rotate
