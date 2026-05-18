@@ -45,6 +45,11 @@ body {
 
 }
 
+.hero-left>a>{
+  text-decoration: none;
+  color: black;
+}
+
 .hero-left img {
   width: 180px;
 }
